@@ -3,23 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
+    "@types/node": "^12.12.37",
     "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
+    "next": "^9.3.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "ts-jest": "^25.4.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "dev": "next",
+    "build": "next build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "tslint": "tslint -p . -c tslint.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +37,38 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@types/react-dom": "^16.9.6",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-react-hooks": "^2.2.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "prettier --write",
+      "git add",
+      "jest",
+      "tslint"
     ]
   }
 }
