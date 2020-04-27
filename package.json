@@ -24,9 +24,7 @@
     "lint:fix": "eslint --fix src/**/*.tsx",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "precommit": "npm run lint && npm test",
-    "prepush": "npm run lint && npm test"
+    "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -66,5 +64,10 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "printWidth": 100
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
   }
 }

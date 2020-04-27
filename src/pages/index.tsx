@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 function HomePage() {
   return <div>Welcome to Next.js!</div>;
 }
