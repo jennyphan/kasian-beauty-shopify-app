@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.css';
 
 function App() {
-  console.log('here2');
+  console.log('here');
   return (
     <div className="App">
       <header className="App-header">

@@ -66,17 +66,5 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "printWidth": 100
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.+(ts|tsx)": [
-      "prettier --write",
-      "jest",
-      "tslint"
-    ]
   }
 }
