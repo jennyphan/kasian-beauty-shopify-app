@@ -1,14 +1,24 @@
 module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript', 'next/babel'],
+  presets: [
+    [
+      'next/babel',
+      {
+        'preset-env': {},
+        'transform-runtime': {},
+        'styled-jsx': {},
+        'class-properties': {}
+      }
+    ]
+  ],
   plugins: [
     [
       'module-resolver',
       {
         root: ['./'],
         alias: {
-          '@components': './components',
-        },
-      },
-    ],
-  ],
+          '@components': './components'
+        }
+      }
+    ]
+  ]
 };

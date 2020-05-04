@@ -8,7 +8,7 @@ module.exports = {
   // using ts-jest
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'ts-jest',
-    '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
+    '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js'
   },
 
   // Runs special logic, such as cleaning up components
@@ -20,8 +20,8 @@ module.exports = {
       branches: 70,
       functions: 70,
       lines: 70,
-      statements: 70,
-    },
+      statements: 70
+    }
   },
 
   // Test spec file resolution pattern
@@ -33,6 +33,6 @@ module.exports = {
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$'],
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   moduleNameMapper: {
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-  },
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
+  }
 };
