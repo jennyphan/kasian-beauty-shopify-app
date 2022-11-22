@@ -27,11 +27,11 @@
     "koa-router": "^8.0.8",
     "koa-session": "^5.13.1",
     "local-storage": "^2.0.0",
-    "next": "^9.3.5",
+    "next": "^13.0.4",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "ts-jest": "^25.4.0",
     "typescript": "~3.7.2",
     "webpack": "^4.43.0"
